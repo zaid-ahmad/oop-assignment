@@ -1,5 +1,44 @@
 class Appointment:
-    '''A Class that represents appointment for Jojo's Hair Salon'''
+    '''A class that represents appointments for Jojo's Hair Salon.
+
+    Attributes:
+        __client_name (str): The name of the client.
+        __client_phone (str): The phone number of the client.
+        __appt_type (int): The index (from 'appt_types' dictionary) for the appointment type.
+        __day_of_week (str): The day of the week for the appointment.
+        __start_time_hour (int): The appointment's starting hour.
+
+    Methods:
+        schedule(client_name, client_phone, appt_type): Makes a new appointment for a client, updating client name, phone, and appointment type.
+        cancel(): Cancels the current appointment, resetting client details and appointment type.
+        get_client_name(): Retrieves the client's name.
+        get_client_phone(): Retrieves the client's phone number.
+        get_appt_type(): Retrieves the appointment type index.
+        get_day_of_week(): Retrieves the day of the week for the appointment.
+        get_start_time_hour(): Retrieves the starting hour of the appointment.
+        get_appt_type_desc(): Retrieves a description of the appointment type based on its index.
+        get_end_time_hour(): Calculates and retrieves the ending hour of the appointment based on the start time.
+        set_client_name(client_name): Updates the client's name.
+        set_client_phone(client_phone): Updates the client's phone number.
+        set_appt_type(appt_type): Updates the appointment type index.
+        format_record(): Formats and retrieves appointment details in a record format.
+
+    Usage:
+        Create an instance of the Appointment class to manage individual appointments for Jojo's Hair Salon.
+        Use the schedule() method to set details for a new appointment.
+        Utilize getters and setters to access or modify specific appointment attributes.
+        Use cancel() to reset/cancel an existing appointment.
+        The __str__() method provides a formatted display of the appointment details.
+
+    Note:
+        The 'appt_types' dictionary maps appointment type indices to their descriptions. 
+        0: "Available",
+        1: "Mens Cut",
+        2: "Ladies Cut",
+        3: "Mens Colouring",
+        4: "Ladies Colouring"
+        Any invalid appointment type index returns "Invalid Appointment Type".
+    '''
 
     def __init__(self, day_of_week, start_time_hour):
         self.__client_name = ''
