@@ -31,7 +31,7 @@ class Appointment:
         The __str__() method provides a formatted display of the appointment details.
 
     Note:
-        The 'appt_types' dictionary maps appointment type indices to their descriptions. 
+        The 'APPT_TYPES' dictionary maps appointment type indices to their descriptions. 
         0: "Available",
         1: "Mens Cut",
         2: "Ladies Cut",
@@ -63,14 +63,14 @@ class Appointment:
         return self.__start_time_hour
 
     def get_appt_type_desc(self):
-        appt_types = {
+        APPT_TYPES = {
             0: "Available",
             1: "Mens Cut",
             2: "Ladies Cut",
             3: "Mens Colouring",
             4: "Ladies Colouring"
         }
-        return appt_types.get(self.__appt_type, "Invalid Appointment Type")
+        return APPT_TYPES.get(self.__appt_type, "Invalid Appointment Type")
 
     def get_end_time_hour(self):
         return self.__start_time_hour + 1
